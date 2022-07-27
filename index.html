@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web menu</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+</head>
+<body>
+    <header>
+        <div class="web_menu">
+            <div class="logo">
+                <img src="./image/logo_type_1.png" alt="로고타입_1">
+            </div><!--logo-->
+
+            <div class="log">
+                <div class="logout">
+                    <div class="logout_img">
+                        <img src="./image/logout_profile.png" alt="로그아웃_상태">
+                    </div><!--logout_img-->
+                    
+                    <div class="login_button"><a href="./sub/sub_login/login.html" target="_blank"><img src="./image/logo_text_color.png" alt="로그인_버튼">로그인</a></div>
+                </div><!--logout-->
+    
+                <div class="login">
+                    <div class="login_img">
+                        <img src="./image/login_profile.png" alt="로그인_상태">
+                        <p><strong>스프_알러뷰</strong>님</p>
+                    </div><!--login_img-->
+                    
+                    <div class="logout_button"><a href="#">로그아웃</a></div>
+                </div><!--login-->
+            </div><!--log-->
+
+            <div class="search">
+                <div class="search_ico">
+                    <img src="./image/free-icon-font-search-3917132.svg" alt="돋보기아이콘">
+                    <p>SPREAD 검색</p>
+                </div><!--search_ico-->
+            </div><!--search-->
+
+            <div class="contents">
+                <div class="menu_1">
+                    <ul class="gnb_1">
+                        <li><a href="./sub/sub_myhome/myhome.html" target="_blank"><img src="./image/menu_home.png" alt="마이홈">MY 홈</a></li>
+                    </ul><!--gnb-->
+                </div><!--menu-->
+
+                <div class="dotted_line"></div>
+
+                <div class="menu_2">
+                    <ul class="gnb_2">
+                        <li><a href="./sub/sub_chart/sub_chat.html" target="_blank"><img src="./image/menu_chart.png" alt="차트">차 트</a></li>
+                        <li><a href="./sub/sub_stereo/stereo.html" target="_blank"><img src="./image/menu_odio.png" alt="오디오">오디오</a></li>
+                        <li><a href="./sub/sub_magazine/magazine.html" target="_blank"><img src="./image/menu_magazine.png" alt="매거진">매거진</a></li>
+                    </ul><!--gnb-->
+                </div><!--menu-->
+
+                <div class="dotted_line"></div>
+
+                <div class="menu_3">
+                    <ul class="gnb_3">
+                        <li><a href="./sub/sub_introduce/introduce.html" target="_blank">SPREAD 소개</a></li>
+                        <li><a href="./sub/sub_member/member.html" target="_blank">멤버십 가입</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul><!--gnb-->
+                </div><!--menu-->
+            </div><!--contents-->
+
+            <div class="music_box">
+
+                <p>음악제목</p>
+
+                <!-- <audio id="myAudio" src="./media/boyswillbeboys_bulow.mp3"></audio> -->
+                <audio id="myAudio">
+                    <source src="./media/boyswillbeboys_bulow.mp3">
+                </audio>
+
+                <div class="music_time">
+                    <span>00:00</span>
+                    <span>00:00</span>
+                </div><!--music_time-->
+
+                <div class="music_bar">
+                    <div class="bar_1"></div>
+                    <div class="bar_2"></div>
+                    <div class="circle"></div>
+                </div><!--music_bar-->
+
+                <div class="music_button">
+                    <button onclick = "repeatBtn()" type="button"><img src="./image/repeat_play_button.png" alt="랜덤"></button>
+
+                    <button onclick="beforeBtn()" type="button"><img src="./image/before_button.png" alt="이전버튼"></button>
+
+                    <button onclick="playBtn()" type="button"><img src="./image/play.png" alt="재생"></button>
+
+                    <button onclick="nextBtn()" type="button"><img src="./image/next_button.png" alt="다음버튼"></button>
+
+                    <button onclick="allBtn()" type="button"><img src="./image/listen_all_button.png" alt="반복"></button>
+                </div><!--music_button-->
+            </div><!--music_box-->
+        </div><!--log-->
+    </header>
+
+
+    <div class="main-footer">
+        <main>
+            <article class="main-slide"> <!-- 하진 -->
+                <h1></h1>
+                <div class="main-slide-flexbox">
+                    <div class="title-music-flexbox">
+                        <img src="./image/main-slide_board_1.png" alt="img-1" class="main-img"> 
+                        <div class="main-title">
+                            <h2>기분전환을 위한 신나는 그루브</h2>
+                            <a href="#">총 20곡 │ 2020.08.11</a> 
+                            <img src="./image/main_button.png" alt="main-button">
+                        </div>
+        
+                        <div class="main-music-flex-box">
+                            <div class="music">
+                                <a href="#"><img src="./image/skateboard_img_1.jpg" alt="img1"></a>
+                                <p>
+                                    <a href="#">Boys Will Be Boys</a>
+                                    <a href="#">bülow</a> 
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/skateboard_img_2.jpg" alt="img2"></a>
+                                <p>
+                                    <a href="#">Ice Cream</a> 
+                                    <a href="#">MIKA</a> 
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/skateboard_img_3.jpg" alt="img3"></a>
+                                <p>
+                                    <a href="#">스무살이 왜이리 ···</a> 
+                                    <a href="#">오반</a> 
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/skateboard_img_4.jpg" alt="img4"></a>
+                                <p>
+                                    <a href="#">평행우주 (PARALLEL)</a> 
+                                    <a href="#">VIXX (빅스)</a> 
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/skateboard_img_5.jpg" alt="img5"></a>
+                                <p>
+                                    <a href="#">Tints (feat. Kendrick Lamar)</a> 
+                                    <a href="#">Anderson Paak</a> 
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/skateboard_img_6.jpg" alt="img6"></a>
+                                <p>
+                                    <a href="#">Don't Don't Do It!</a> 
+                                    <a href="#">N.E.R.D & Kendrick Lamar</a> 
+                                </p>
+                            </div>
+                        </div> <!-- main-music-flex-box -->
+                    </div> <!-- title-music-flexbox -->
+
+                    <div class= "title-music-flexbox">
+                        <img src="./image/main-slide_spring_2.png" alt="img-2" class="main-img">
+                        <div class="main-title">
+                            <h2>끝나지 않을 우리의 봄을 담을 노래</h2> 
+                            <a href="#">총 14곡 │ 2020.04.15</a>
+                            <img src="./image/main_button.png" alt="main-button">
+                        </div> <!-- main-title -->
+        
+                        <div class="main-music-flex-box">
+                            <div class="music">
+                                <a href="#"><img src="./image/spring_img_1.jpg" alt="img1"></a>
+                                <p>
+                                    <a href="#">BABY BABY</a> 
+                                    <a href="#">포맨(4MAN)</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/spring_img_2.jpg" alt="img2"></a>
+                                <p>
+                                    <a href="#">FLY</a> 
+                                    <a href="#">긱스(GEEKS)</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/spring_img_3.jpg" alt="img3"></a>
+                                <p>
+                                    <a href="#">LOVE</a> 
+                                    <a href="#">프라이머리(PRIMARY)</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/spring_img_4.jpg" alt="img4"></a>
+                                <p>
+                                    <a href="#">Starlight</a> 
+                                    <a href="#">태일</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/spring_img_5.jpg" alt="img5"></a>
+                                <p>
+                                    <a href="#">Stylist</a> 
+                                    <a href="#">비오(Be O)</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/spring_img_6.jpg" alt="img6"></a>
+                                <p>
+                                    <a href="#">러브119</a> 
+                                    <a href="#">케이윌(K.Will)</a>
+                                </p>
+                            </div>
+                        </div> <!-- main-music-flex-box -->
+                    </div>  <!-- title-music-flexbox --> 
+        
+                    <div class="title-music-flexbox">
+                        <img src="./image/main-slide_concert_3.png" alt="img-3" class="main-img">
+                        <div class="main-title">
+                            <h2>듣기만 해도 신나는 아이돌 노래</h2> 
+                            <a href="#">총 11곡 │ 2022.04.14</a>
+                            <img src="./image/main_button.png" alt="main-button">
+                        </div>
+        
+                        <div class="main-music-flex-box">
+                            <div class="music">
+                                <a href="#"><img src="./image/concert_img_1.jpg" alt="img1"></a>
+                                <p>
+                                    <a href="#">DAYDREAM</a> 
+                                    <a href="#">하이라이트</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/concert_img_2.jpg" alt="img2"></a>
+                                <p>
+                                    <a href="#">Dolphin</a> 
+                                    <a href="#">오마이걸</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/concert_img_3.jpg" alt="img3"></a>
+                                <p>
+                                    <a href="#">Dreams come true</a> 
+                                    <a href="#">aespa</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/concert_img_4.jpg" alt="img4"></a>
+                                <p>
+                                    <a href="#">Dun Dun Dance</a> 
+                                    <a href="#">오마이걸</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/concert_img_5.jpg" alt="img5"></a>
+                                <p>
+                                    <a href="#">Feel My Rhythm</a> 
+                                    <a href="#">Red Velvet</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/concert_img_6.jpg" alt="img6"></a>
+                                <p>
+                                    <a href="#">Love Dive</a> 
+                                    <a href="#">아이브</a>
+                                </p>
+                            </div>
+                        </div> <!-- main-music-flex-box -->
+                    </div> <!-- title-music-flexbox -->  
+        
+                    <div class="title-music-flexbox">
+                        <img src="./image/main-slide_cafe_4.png" alt="img-4" class="main-img">
+                        <div class="main-title">
+                            <h2>카페에서 듣는 잔잔한 발라드</h2>
+                            <a href="#">총 16곡 │ 2022.01.03</a>
+                            <img src="./image/main_button.png" alt="main-button">
+                        </div>
+        
+                        <div class="main-music-flex-box">
+                            <div class="music">
+                                <a href="#"><img src="./image/cafe_img_1.jpg" alt="img1"></a>
+                                <p>
+                                    <a href="#">우리가 헤어져야 했던 이유</a>
+                                    <a href="#">비비(BIBI)</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/cafe_img_2.jpg" alt="img2"></a>
+                                <p>
+                                    <a href="#">사랑은 말로 표현하는게 아니래요</a>
+                                    <a href="#">규현(KYUHYUN)</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/cafe_img_3.jpg" alt="img3"></a>
+                                <p>
+                                    <a href="#">사실 나는 (Feat.전건호)</a>
+                                    <a href="#">경서예지</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/cafe_img_4.jpg" alt="img4"></a>
+                                <p>
+                                    <a href="#">그대 잠시 내게</a>
+                                    <a href="#">이무진</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/cafe_img_5.jpg" alt="img5"></a>
+                                <p>
+                                    <a href="#">찰나가 영원이 될 때Red Moon  Beyond The Light</a>
+                                    <a href="#">마크툽 (MAKTUB)</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/cafe_img_6.jpg" alt="img6"></a>
+                                <p>
+                                    <a href="#">우린 어쩌다 헤어진 걸까</a>
+                                    <a href="#">허각</a>
+                                </p>
+                            </div>
+                        </div> <!-- main-music-flex-box -->
+                    </div> <!-- title-music-flexbox -->
+        
+                    <div class="title-music-flexbox">
+                        <img src="./image/main-slide_work_5.png" alt="img-5" class="main-img">
+                        <div class="main-title">
+                            <h2>퇴근하고 싶을 때 듣는 감성노래</h2>
+                            <a href="#">총 16곡 │ 2022.01.06</a>
+                            <img src="./image/main_button.png" alt="main-button">
+                        </div>
+        
+                        <div class="main-music-flex-box">
+                            <div class="music">
+                                <a href="#"><img src="./image/work_img_1.jpg" alt="img1"></a>
+                                <p>
+                                    <a href="#">Be There</a>
+                                    <a href="#">치즈</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/work_img_2.jpg" alt="img2"></a>
+                                <p>
+                                    <a href="#">Blue(Feat.Crush,SOLE)</a>
+                                    <a href="#">다이나믹 듀오</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/work_img_3.jpg" alt="img3"></a>
+                                <p>
+                                    <a href="#">Bunny</a>
+                                    <a href="#">백예린</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/work_img_4.jpg" alt="img4"></a>
+                                <p>
+                                    <a href="#">By My Side</a>
+                                    <a href="#">JUNNY(주니)</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/work_img_5.jpg" alt="img5"></a>
+                                <p>
+                                    <a href="#">Clouds</a>
+                                    <a href="#">오존(O3ohn)</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/work_img_6.jpg" alt="img6"></a>
+                                <p>
+                                    <a href="#">Dali,Van,Picasso</a>
+                                    <a href="#">빈지노(Beenzino)</a>
+                                </p>
+                            </div>
+                        </div> <!-- main-music-flex-box -->
+                    </div> <!-- title-music-flexbox -->
+        
+                    <div class="title-music-flexbox">
+                        <img src="./image/main-slide_night_6.png" alt="img-6" class="main-img">
+                        <div class="main-title">
+                            <h2>야경이 수놓은 저녁에 듣는 음악</h2>
+                            <a href="#">총 20곡 │ 2019.09.26</a>
+                            <img src="./image/main_button.png" alt="main-button">
+                        </div>
+        
+                        <div class="main-music-flex-box">
+                            <div class="music">
+                                <a href="#"><img src="./image/night_img_1.jpg" alt="img1"></a>
+                                <p>
+                                    <a href="#">Autumn Breeze</a>
+                                    <a href="#">JIDA(지다)</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/night_img_2.jpg" alt="img2"></a>
+                                <p>
+                                    <a href="#">Breathing Underwater</a>
+                                    <a href="#">지안(JLAN)</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/night_img_3.jpg" alt="img3"></a>
+                                <p>
+                                    <a href="#">Colors Of You_.jpg</a>
+                                    <a href="#">92914</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/night_img_4.jpg" alt="img4"></a>
+                                <p>
+                                    <a href="#">Hole</a>
+                                    <a href="#">Humbert & 구원찬</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/night_img_5.jpg" alt="img5"></a>
+                                <p>
+                                    <a href="#">In My Heart</a>
+                                    <a href="#">크림(KREAM)</a>
+                                </p>
+                            </div>
+                            <div class="music">
+                                <a href="#"><img src="./image/night_img_6.jpg" alt="img6"></a>
+                                <p>
+                                    <a href="#">Little, Big, our Stars</a>
+                                    <a href="#">챈스(Chance)</a>
+                                </p>
+                            </div>
+                        </div> <!-- main-music-flex-box -->
+                    </div> <!-- title-music-flexbox -->
+                </div> <!-- main-slide-flexbox -->
+
+                <div id="left">
+                    <img src="./image/main_slide_arrow_prev.png" alt="prev">
+                </div>
+                <div id="right">
+                    <img src="./image/main_slide_arrow_next.png" alt="next">
+                </div>
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </article> <!-- main-slide -->
+    
+            <article class="sect-music-playlist">
+
+                <div class="music-playlist-flex-box">
+                    <div class="recent-playlist">
+                        <h2>최근에 들은 음악</h2>
+                        <a href="#"><img src="./image/recent_playlist.png" alt="recent-playlist-img"></a>
+                        <a href="#" class="title">가끔씩 그대가 그리워</a>
+                        <a href="#" class="artist">파니니 브런치 (PANINI BRUNCH)</a>
+                    </div> <!-- recent-playlist -->
+    
+                    <div class="ai-playlist">
+                        <h2>AI 추천 음악</h2>
+                        <div class="ai-music">
+                            <div class="ai-flex-box">
+                                <div class="ai-playlist_1">
+                                    <a href="#" class="image"><img src="./image/AI-playlist_1.png" alt="ai-playlist1"></a>
+                                    <a href="#" class="title">그대를 비출게요</a>
+                                    <a href="#" class="artist">송민경</a>
+                                </div>
+                                <div class="ai-playlist_1">
+                                    <a href="#" class="image"><img src="./image/AI-playlist_2.png" alt="ai-playlist2"></a>
+                                    <a href="#" class="title">어떨 것 같아</a>
+                                    <a href="#" class="artist">새봄 (saevom)</a>
+                                </div>
+                                <div class="ai-playlist_1">
+                                    <a href="#" class="image"><img src="./image/AI-playlist_3.png" alt="ai-playlist3"></a>
+                                    <a href="#" class="title">멍</a>
+                                    <a href="#" class="artist">함예찬</a>
+                                </div>
+                            </div> <!-- ai-flex-box -->
+                            <div id="ai-prev"><img src="/image/aiplaylist_arrow_prev.png" alt="prev"></div>
+                            <div id="ai-next"><img src="./image/aiplaylist_arrow_next.png" alt="next"></div>
+                        </div>
+                    </div> <!-- ai-playlist -->
+                </div> <!-- music-playlist-flex-box -->
+            </article> <!-- music-playlist --> <!-- 하진 -->
+    
+            <div class="flex-box">
+                <div class="djplay_list">
+                    
+                    <h2>스프DJ플레이</h2>
+            
+                    <div id="djplay" class="djplay_1">
+                        <div id="order_1" class="menu">
+                            <div class="crown_1">
+                                <img src="./image/magazine_1.png" alt="왕관">
+                                <p>1</p>
+                            </div>
+        
+                            <div class="id">
+                                <img src="./image/profile_picture.png" alt="프로필사진">
+                                <p>스프최고DJ</p>
+                            </div>
+        
+                            <div class="surge">
+                                <p><img src="./image/arrow.png" alt="화살표">112</p>
+                            </div>
+                        </div><!--order_1-->
+
+                        <div id="firstprofile" class="profile-display">
+                            <div class="profile">
+                                <div class="story">
+                                    <p><strong>한마디</strong>스프레드 최고DJ 스프들의 취향저격 앨범보유</p>
+                                </div><!--story-->
+            
+                                <div class="follow">
+                                    <p><strong>팔로우</strong> 3,500명</p>
+                                    <p><strong>지난순위</strong> <span>1</span>위</p>
+                                    <p><strong>보유앨범</strong> 70개</p>
+            
+                                    <div class="hashtag">
+                                        <p>#K-POP</p>
+                                    </div>
+                                </div><!--follow-->
+            
+                                <div class="album_name">
+                                    <p>발라드</p>
+                                    <p>K-POP</p>
+                                    <P>인디</P>
+                                </div><!--album-->
+            
+                                <div class="album_bar">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+            
+                                <div class="album">
+                                    <div class="album_jacket_1_1">
+                                        <div class="album_jacket">
+                                            <img src="./image/album_jacket_5.png" alt="앨범자켓5">
+                                        </div>
+                                        
+                                        <div class="album_title">
+                                            <p>밤하늘의 별</p>
+                                            <p><img src="./image/free-icon-font-heart-3916579.svg" alt="하트">8,406 ｜ 28곡</p>
+                                        </div>
+                                    </div>
+                
+                                    <div class="album_jacket_1_2">
+                                        <div class="album_jacket">
+                                            <img src="./image/album_jacket_14.png" alt="앨범자켓14">
+                                        </div>
+                
+                                        <div class="album_title">
+                                            <p>global star</p>
+                                            <p><img src="./image/free-icon-font-heart-3916579.svg" alt="하트">5,452 ｜ 15곡</p>
+                                        </div>
+                                    </div>
+                
+                                    <div class="album_jacket_1_3">
+                                        <div class="album_jacket">
+                                            <img src="./image/album_jacket_18.png" alt="앨범자켓18">
+                                        </div>   
+                                        
+                                        <div class="album_title">
+                                            <p>여유로운 오후</p>
+                                            <p><img src="./image/free-icon-font-heart-3916579.svg" alt="하트">1,879 ｜ 8곡</p>
+                                        </div>
+                                    </div>
+                                </div><!--album-->
+                            </div><!--profile-->
+                        </div><!--profile-block-->
+                    </div><!--djplay_1-->
+        
+        
+        
+                    <div id="djplay" class="djplay_2">
+                        <div id="order_2" class="menu">
+                            <div class="crown_2">
+                                <img src="./image/magazine_2.png" alt="왕관">
+                                <p>2</p>
+                            </div>
+        
+                            <div class="id">
+                                <img src="./image/login_profile.png" alt="프로필사진">
+                                <p>갬성플레이DJ</p>
+                            </div>
+        
+                            <div class="surge">
+                                <p><img src="./image/arrow.png" alt="화살표">75</p>
+                            </div>
+                        </div><!--order_2-->
+                        
+                        <div class="profile-display">
+                            <div class="profile">
+                                <div class="story">
+                                    <p><strong>한마디</strong>감성적인 음악은 갬성플레이DJ</p>
+                                </div><!--story-->
+            
+                                <div class="follow">
+                                    <p><strong>팔로우</strong> 2,540명</p>
+                                    <p><strong>지난순위</strong> 2위</p>
+                                    <p><strong>보유앨범</strong> 42개</p>
+            
+                                    <div class="hashtag">
+                                        <p>#감성</p>
+                                        <p>#재즈</p>
+                                    </div>
+                                </div><!--follow-->
+            
+                                <div class="album_name">
+                                    <p>재즈</p>
+                                    <p>발라드</p>
+                                    <P>팝</P>
+                                </div><!--album-->
+            
+                                <div class="album_bar">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+            
+                                <div class="album">
+                                    <div class="album_jacket_2_1">
+                                        <div class="album_jacket">
+                                            <img src="./image/album_jacket_17.png" alt="앨범자켓17">
+                                        </div>
+                                        
+                                        <div class="album_title">
+                                            <p>cloudy day</p>
+                                            <p><img src="./image/free-icon-font-heart-3916579.svg" alt="하트">8,406 ｜ 28곡</p>
+                                        </div>
+                                    </div>
+                
+                                    <div class="album_jacket_2_2">
+                                        <div class="album_jacket">
+                                            <img src="./image/album_jacket_8.png" alt="앨범자켓8">
+                                        </div>
+                
+                                        <div class="album_title">
+                                            <p>mood</p>
+                                            <p><img src="./image/free-icon-font-heart-3916579.svg" alt="하트">5,452 ｜ 15곡</p>
+                                        </div>
+                                    </div>
+                
+                                    <div class="album_jacket_2_3">
+                                        <div class="album_jacket">
+                                            <img src="./image/album_jacket_9.png" alt="앨범자켓9">
+                                        </div>   
+                                        
+                                        <div class="album_title">
+                                            <p>늦은 밤 금요일</p>
+                                            <p><img src="./image/free-icon-font-heart-3916579.svg" alt="하트">1,879 ｜ 8곡</p>
+                                        </div>
+                                    </div>
+                                </div><!--album-->
+                            </div><!--profile-->
+                        </div><!--profile-none-->
+                    </div><!--djplay_2-->
+        
+        
+        
+                    <div id="djplay" class="djplay_3">
+                        <div id="order_3" class="menu">
+                            <div class="crown_3">
+                                <img src="./image/magazine_3.png" alt="왕관">
+                                <p>3</p>
+                            </div>
+        
+                            <div class="id">
+                                <img src="./image/login_profile.png" alt="프로필사진">
+                                <p>퐁당스프</p>
+                            </div>
+        
+                            <div class="surge">
+                                <p><img src="./image/arrow.png" alt="화살표">20</p>
+                            </div>
+                        </div><!--order_3-->
+                        
+                        <div class="profile-display">
+                            <div class="profile">
+                                <div class="story">
+                                    <p><strong>한마디</strong>신나는 음악은 여기로 모여라 퐁당스프!</p>
+                                </div><!--story-->
+            
+                                <div class="follow">
+                                    <p><strong>팔로우</strong> 1,358명</p>
+                                    <p><strong>지난순위</strong> 4위</p>
+                                    <p><strong>보유앨범</strong> 35개</p>
+            
+                                    <div class="hashtag">
+                                        <p>#신나는</p>
+                                    </div>
+                                </div><!--follow-->
+            
+                                <div class="album_name">
+                                    <p>힙합</p>
+                                    <p>댄스</p>
+                                    <P>알앤비</P>
+                                </div><!--album-->
+            
+                                <div class="album_bar">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+            
+                                <div class="album">
+                                    <div class="album_jacket_3_1">
+                                        <div class="album_jacket">
+                                            <img src="./image/album_jacket_9.png" alt="앨범자켓9">
+                                        </div>
+                                        
+                                        <div class="album_title">
+                                            <p>Hip hop</p>
+                                            <p><img src="./image/free-icon-font-heart-3916579.svg" alt="하트">8,406 ｜ 28곡</p>
+                                        </div>
+                                    </div>
+                
+                                    <div class="album_jacket_3_2">
+                                        <div class="album_jacket">
+                                            <img src="./image/album_jacket_15.png" alt="앨범자켓15">
+                                        </div>
+                
+                                        <div class="album_title">
+                                            <p>신나는 날</p>
+                                            <p><img src="./image/free-icon-font-heart-3916579.svg" alt="하트">5,452 ｜ 15곡</p>
+                                        </div>
+                                    </div>
+                
+                                    <div class="album_jacket_3_3">
+                                        <div class="album_jacket">
+                                            <img src="./image/album_jacket_12.png" alt="앨범자켓12">
+                                        </div>   
+                                        
+                                        <div class="album_title">
+                                            <p>빛나는 밤</p>
+                                            <p><img src="./image/free-icon-font-heart-3916579.svg" alt="하트">1,879 ｜ 8곡</p>
+                                        </div>
+                                    </div>
+                                </div><!--album-->
+                            </div><!--profile-->
+                        </div><!--profile-none-->
+                    </div><!--djplay_3-->
+        
+        
+        
+                    <div id="djplay" class="djplay_4">
+                        <div id="order_4" class="menu">
+                            <div class="crown_4">
+                                <p>4</p>
+                            </div>
+        
+                            <div class="id">
+                                <img src="./image/login_profile.png" alt="프로필사진">
+                                <p>포도당스프</p>
+                            </div>
+        
+                            <div class="surge">
+                                <p>-</p>
+                            </div>
+                        </div><!--order_4-->
+                        
+                        <div class="profile-display">
+                            <div class="profile">
+                                <div class="story">
+                                    <p><strong>한마디</strong>포도당보다 달달한 스프 노래 추천</p>
+                                </div><!--story-->
+            
+                                <div class="follow">
+                                    <p><strong>팔로우</strong> 768명</p>
+                                    <p><strong>지난순위</strong> 4위</p>
+                                    <p><strong>보유앨범</strong> 28개</p>
+            
+                                    <div class="hashtag">
+                                        <p>#로맨스</p>
+                                    </div>
+                                </div><!--follow-->
+            
+                                <div class="album_name">
+                                    <p>발라드</p>
+                                    <p>가요</p>
+                                    <P>팝</P>
+                                </div><!--album-->
+            
+                                <div class="album_bar">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+            
+                                <div class="album">
+                                    <div class="album_jacket_4_1">
+                                        <div class="album_jacket">
+                                            <img src="./image/album_jacket_11.png" alt="앨범자켓11">
+                                        </div>
+                                        
+                                        <div class="album_title">
+                                            <p>감성적인 음악</p>
+                                            <p><img src="./image/free-icon-font-heart-3916579.svg" alt="하트">8,406 ｜ 28곡</p>
+                                        </div>
+                                    </div>
+                
+                                    <div class="album_jacket_4_2">
+                                        <div class="album_jacket">
+                                            <img src="./image/album_jacket_6.png" alt="앨범자켓6">
+                                        </div>
+                
+                                        <div class="album_title">
+                                            <p>노을지는 하늘</p>
+                                            <p><img src="./image/free-icon-font-heart-3916579.svg" alt="하트">5,452 ｜ 15곡</p>
+                                        </div>
+                                    </div>
+                
+                                    <div class="album_jacket_4_3">
+                                        <div class="album_jacket">
+                                            <img src="./image/album_jacket_13.png" alt="앨범자켓13">
+                                        </div>   
+                                        
+                                        <div class="album_title">
+                                            <p>우리의 블루스</p>
+                                            <p><img src="./image/free-icon-font-heart-3916579.svg" alt="하트">1,879 ｜ 8곡</p>
+                                        </div>
+                                    </div>
+                                </div><!--album-->
+                            </div><!--profile-->
+                        </div><!--profile-none-->
+                    </div><!--djplay_4-->
+        
+        
+        
+                    <div id="djplay" class="djplay_5">
+                        
+                        <div id="lastprofile" class="profile-display">
+                            <div class="profile">
+                                <div class="story">
+                                    <p><strong>한마디</strong>스프레드를 좋아하는 사람들 스좋사</p>
+                                </div><!--story-->
+            
+                                <div class="follow">
+                                    <p><strong>팔로우</strong> 542명</p>
+                                    <p><strong>지난순위</strong> 5위</p>
+                                    <p><strong>보유앨범</strong> 22개</p>
+            
+                                    <div class="hashtag">
+                                        <p>#신나는</p>
+                                    </div>
+                                </div><!--follow-->
+            
+                                <div class="album_name">
+                                    <p>트로트</p>
+                                    <p>클래식</p>
+                                    <P>재즈</P>
+                                </div><!--album-->
+            
+                                <div class="album_bar">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+            
+                                <div class="album">
+                                    <div class="album_jacket_5_1">
+                                        <div class="album_jacket">
+                                            <img src="./image/album_jacket_10.png" alt="앨범자켓10">
+                                        </div>
+                                        
+                                        <div class="album_title">
+                                            <p>레트로</p>
+                                            <p><img src="./image/free-icon-font-heart-3916579.svg" alt="하트">8,406 ｜ 28곡</p>
+                                        </div>
+                                    </div>
+                
+                                    <div class="album_jacket_5_2">
+                                        <div class="album_jacket">
+                                            <img src="./image/album_jacket_17.png" alt="앨범자켓17">
+                                        </div>
+                
+                                        <div class="album_title">
+                                            <p>카페에서</p>
+                                            <p><img src="./image/free-icon-font-heart-3916579.svg" alt="하트">5,452 ｜ 15곡</p>
+                                        </div>
+                                    </div>
+                
+                                    <div class="album_jacket_5_3">
+                                        <div class="album_jacket">
+                                            <img src="./image/album_jacket_12.png" alt="앨범자켓12">
+                                        </div>   
+                                        
+                                        <div class="album_title">
+                                            <p>술 한잔 하면서</p>
+                                            <p><img src="./image/free-icon-font-heart-3916579.svg" alt="하트">1,879 ｜ 8곡</p>
+                                        </div>
+                                    </div>
+                                </div><!--album-->
+                            </div><!--profile-->
+                        </div><!--profile-none-->
+        
+                        <div id="order_5" class="menu">
+                            <div class="crown_5">
+                                <p>5</p>
+                            </div>
+        
+                            <div class="id">
+                                <img src="./image/login_profile.png" alt="프로필사진">
+                                <p>스프좋아</p>
+                            </div>
+        
+                            <div class="surge">
+                                <p>-</p>
+                            </div>
+                        </div><!--order_5-->
+                    </div><!--djplay_5-->
+                </div><!--djplay_list-->
+    
+                <section class="contents">
+                    <h2>SNS</h2>
+                    <div class="box-boder">
+                        <div class="profile-img">
+                            <div class="nick-img">
+                                <a href="#"><img src="./image/login_profile.png" alt="profile-img"></a>
+                            </div>
+    
+                            <div class="text-area">
+                                <textarea name="text-area" id="text_area" cols="65" rows="3" placeholder="무슨 일이 일어나고 있나요?"></textarea>
+                            </div>
+                        </div> <!-- profile-img -->
+    
+                        <div class="img-imoticon">
+                            <div class="imoticon">
+                                <a href="#"><img src="./image/img_picture.png" alt="img-picture"></a>
+                                <a href="#"><img src="./image/music_icon.png" alt="music-icon"></a>
+                                <a href="#"><img src="./image/music_play2.png" alt="music-play2"></a>
+                                <a href="#"><img src="./image/imoticon.png" alt="imoticon"></a>
+                            </div>
+    
+                            <div class="sp-btn">
+                                <button>스프하기</button>
+                            </div>
+                        </div> <!-- img-imoticon -->
+    
+                        <div class="profile-set">
+                            <div class="set-img">
+                                <div class="nick-img">
+                                    <a href="#"><img src="./image/login_profile.png" alt="profile-img"></a>
+                                </div>
+                                
+                                <div class="nick">
+                                    <p><a href="#">HR_KIM9059</a></p>
+                                </div>
+                            </div>
+    
+                            <div class="sp-set">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div> <!-- profile-set -->
+                    </div> <!-- boder-box -->
+    
+                    <div class="more-box">
+                        <div class="sns">    
+                            <div class="music-txt">
+                                <div class="music-img">
+                                    <a href="#"><img src="./image/music_img.png" alt="music-img"></a>
+                                </div> <!-- music-img -->
+            
+                                <div class="like-txt">
+                                    <div class="heart-img">
+                                        <a href="#"><img src="./image/hart.png" alt="hart"></a>
+                                    </div>
+                                    
+                                    <p>
+                                        00명이 좋아합니다.
+                                    </p>
+                                    
+                                    <strong>저의 재즈리스트 공유합니다. ^^7</strong>
+                                </div> <!-- like-txt -->
+            
+                                <div class="music-txt">
+                                    <div class="music-img2">
+                                        <a href="#"><img src="./image/music_img2.png" alt="music-img2"></a>
+                                    </div>
+                                    
+                                    <div class="play-item">
+                                        <div class="play-img">
+                                            <a href="#"><img src="./image/play2.png" alt="play2"></a>
+                                        </div>
+            
+                                        <p>
+                                            YANGSTAR224
+                                            <span>TOMMY YANG</span>
+                                        </p>
+                                    </div>
+                                </div> <!-- music-txt2 -->
+    
+                                <div class="like-txt">
+                                    <div class="heart-img">
+                                        <a href="#"><img src="./image/hart.png" alt="hart"></a>
+                                    </div>
+    
+                                    <p>
+                                        00명이 좋아합니다.
+                                    </p>
+                                    <strong>이 음악 너무 좋지않나요?</strong>
+                                </div>
+                            </div><!-- music_txt -->
+                        </div> <!-- sns -->
+            
+                        <div class="comment">
+                            <div class="comment-txt">
+                                <a href="#">댓글 124개 모두 보기</a>
+                            </div>
+            
+                            <div class="like-comment">
+                                <div class="like-item">
+                                    <div class="profile-sp">
+                                        <span></span>
+                                    </div>
+                                    
+                                    <div class="like-profile">
+                                        <div class="heart-img">
+                                            <a href="#"><img src="./image/hart.png" alt="hart"></a>
+                                        </div>
+                                        <div class="like-pro">
+                                            <strong>스프 좋아</strong>
+                                            <p>
+                                                선곡이 좋네요 :)
+                                            </p>
+                                        </div>
+                                        <div class="like-com">
+                                            <a href="#">
+                                                <p>
+                                                    좋아요 1개
+                                                </p>
+                                            </a>
+    
+                                            <a href="#">
+                                                <p>
+                                                    답글 달기
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div> <!-- like_profile -->
+                                </div> <!-- like_item1 -->
+    
+                                <div class="like-item">
+                                    <div class="nick-img">
+                                        <a href="#"><img src="./image/login_profile.png" alt="pro-img"></a>
+                                    </div>
+            
+                                    <div class="like-profile">
+                                        <div class="heart-img">
+                                            <a href="#"><img src="./image/hart.png" alt="hart"></a>
+                                        </div>
+                                        <div class="like-pro">
+                                            <strong>스프_재즈사랑</strong>
+                                            <p>
+                                                노래 리스트 너무 좋아요 하트 누르고 갑니다.
+                                            </p>
+                                        </div>
+                                        <div class="like-com">
+                                            <a href="#">
+                                                <p>
+                                                    좋아요 1개
+                                                </p>
+                                            </a>
+                                            
+                                            <a href="#">
+                                                <p>
+                                                    답글 달기
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div> <!-- like-profile -->
+                                </div> <!-- like_item2 -->
+            
+                                <div class="like-item">
+                                    <div class="profile-sp">
+                                        <span></span>
+                                    </div>
+            
+                                    <div class="like-profile">
+                                        <div class="heart-img">
+                                            <a href="#"><img src="./image/hart.png" alt="hart"></a>
+                                        </div>
+                                        <div class="like-pro">
+                                            <strong>스프_재즈사랑</strong>
+                                            <p>
+                                                노래 리스트 너무 좋아요 하트 누르고 갑니다.
+                                            </p>
+                                        </div>
+                                        <div class="like-com">
+                                            <a href="#">
+                                                <p>
+                                                    좋아요 1개
+                                                </p>
+                                            </a>
+                                            
+                                            <a href="#">
+                                                <p>
+                                                    답글 달기
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div> <!-- like-profile -->
+                                </div> <!-- like_item3 -->
+            
+                                <div class="like-item">
+                                    <div class="profile-sp">
+                                        <span></span>
+                                    </div>
+            
+                                    <div class="like-profile">
+                                        <div class="heart-img" >
+                                            <a href="#"><img src="./image/hart.png" alt="hart"></a>
+                                        </div>
+                                        <div class="like-pro">
+                                            <strong>노래 좋으면 짱드림</strong>
+                                            <p>
+                                                짱
+                                            </p>
+                                        </div>
+                                        <div class="like-com">
+                                            <a href="#">
+                                                <p>
+                                                    좋아요 1개
+                                                </p>
+                                            </a>
+                                            
+                                            <a href="#">
+                                                <p>
+                                                    답글 달기
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div> <!-- like-profile -->
+                                </div> <!-- like-item4 -->
+    
+                                <div class="plus">
+                                    <div class="plus-bd">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+    
+                            </div> <!-- like_comment 첫번째-->
+            
+                            <div class="comment-txt">
+                                <a href="#">댓글 4개 모두 보기</a>
+                            </div>
+            
+                            <div class="like-comment">
+                                <div class="like-item">
+                                    <div class="profile-sp">
+                                        <span></span>
+                                    </div>
+                                    
+                                    <div class="like-profile">
+                                        <div class="heart-img" >
+                                            <a href="#"><img src="./image/hart.png" alt="hart"></a>
+                                        </div>
+                                        <div class="like-pro">
+                                            <strong>음악 사랑</strong>                                
+                                            <p>
+                                                명곡이네요.
+                                            </p>
+                                        </div>
+    
+                                        <div class="like-com">
+                                            <a href="#">
+
+                                                <p>
+                                                    좋아요 1개
+                                                </p>
+                                            </a>
+                                            
+                                            <a href="#">
+                                                <p>
+                                                    답글 달기
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div> <!-- like_profile -->
+                                </div> <!-- like_item1 -->
+    
+                                <div class="like-item">
+                                    <div class="profile-sp">
+                                        <span></span>
+                                    </div>
+                                    
+                                    <div class="like-profile">
+                                        <div class="heart-img" >
+                                            <a href="#"><img src="./image/hart.png" alt="hart"></a>
+                                        </div>
+                                        <div class="like-pro">
+                                            <strong>댄스 댄스</strong>                                
+                                            <p>
+                                                저도 좋아해요!
+                                            </p>
+                                        </div>
+    
+                                        <div class="like-com">
+                                            <a href="#">
+                                                <p>
+                                                    좋아요 1개
+                                                </p>
+                                            </a>
+                                            
+                                            <a href="#">
+                                                <p>
+                                                    답글 달기
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div> <!-- like_profile -->
+                                </div> <!-- like_item2 -->
+    
+                                <div class="plus">
+                                    <div class="plus-bd">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div> <!-- like_comment 2번째-->
+                        </div> <!-- comment -->
+                    </div> <!-- more-box -->
+    
+                    <div class="input-comment">
+                        <div class="input-title">
+                            <h3>댓글</h3>
+    
+                            <div class="input-close">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="comment-text">
+                            <textarea name="comment" cols="35" rows="1" placeholder="댓글 달기..."></textarea>
+                            <div class="comment-btn">
+                                <button>등록</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="taste">
+                    <div class="taste_bg_img">
+                        <img src="./image/taste_bg.png" alt="취향선택배경">
+                    </div>
+    
+                    <div class="taste_text">
+                        <p>취향을 선택하여 나만의 <strong>SPREAD</strong> 만들기</p>
+        
+                        <div class="text">
+                            <p>취향을 선택하고 나에게 맞는 홈을 받아보세요</p>
+                        </div>
+        
+                        <button>선택하러 가기</button>
+                    </div>            
+                </div>
+            </div><!-- flex-box -->
+        </main>
+    
+    
+        <footer>
+            <div class="flex-box">
+                <div class="footer-logo">
+                    <a href="#"><img src="./image/logo_type_2.png" alt="logo_type_2"></a>
+                </div>
+    
+                <div class="info-box">
+                        <div class="notice-menu">
+                            <div class="title-flex">
+                                <h4><a href="./sub/sub_introduce/introduce.html" target="_blank">SPREAD소개</a></h4>
+                                <h4><a href="#">공지사항</a></h4>
+                                <h4><a href="#">고객센터</a></h4>
+                            </div>
+                        </div>
+    
+                    <nav>
+                        <div class="footer_info">
+                            <ul class="footer-menu">
+                                <li><a href="./sub/sub_footer_terms_of_service/terms_of_service.html">이용약관</a></li>
+                                <li><a href="./sub/sub_footer_privacy/privacy.html">개인정보 처리방침</a></li>
+                                <li><a href="./sub/sub_footer_teenager/teenager.html">청소년 보호정책</a></li>
+                                <li><a href="./sub/sub_footer_promotion/promotion.html">제휴/프로모션문의</a></li>
+                                <li><a href="./sub/sub_footer_business/business.html">사업자정보확인</a></li>
+                            </ul>
+                        </div> <!-- footer_info -->
+                    </nav>
+                    
+                    <address>
+                        SPREAD(주) ㅣ
+                        대표이사 : 김일조ㅣ
+                        사업자등록번호 : 000-81-00000ㅣ
+                        통신판매업 신고번호 : 2022-서울당산-0000 <br>
+                        스프레드하우스 : 서울특별시 영등포구 당산로49길 4 (당산동6가) 태안빌딩 4Fㅣ
+                        대표전화 : 1599-0000
+                    </address>
+                </div> <!-- info-box -->
+            </div> <!-- flex-box -->
+        </footer>
+    </div> <!-- main-footer -->
+</body>
+</html>
